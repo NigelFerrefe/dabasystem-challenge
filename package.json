@@ -1,0 +1,18 @@
+{
+  "name": "dabasystem-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "less-watch-compiler less css style.less",
+    "build": "lessc less/style.less css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "less": "^4.6.4",
+    "less-watch-compiler": "^1.17.5"
+  }
+}
