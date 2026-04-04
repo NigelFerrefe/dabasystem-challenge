@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="World Trade Center Barcelona, espai de treball vora el mar." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
     />
     <link
       rel="stylesheet"
@@ -25,13 +22,19 @@
       <div class="mdlwrap">
         <!-- hero module-->
         <section class="mdlhero">
-          <div class="mdlheroslider swiper">
+          <section class="mdlheroslider swiper" aria-label="Imatges destacades">
             <div class="swiper-wrapper">
-              <div class="swiper-slide mdlheroslide mdlheroslide01"></div>
+              <div class="swiper-slide mdlheroslide mdlheroslide01">
+                <img src="assets/images/heroImage.png" alt="Vista d'una noia amb una tablet" class="mdlheroslideimg" />
+              </div>
 
-              <div class="swiper-slide mdlheroslide mdlheroslide02"></div>
+              <div class="swiper-slide mdlheroslide mdlheroslide02">
+                <img src="assets/images/sliderImage.jpg" alt="Vista del port de Barcelona" class="mdlheroslideimg" />
+              </div>
 
-              <div class="swiper-slide mdlheroslide mdlheroslide03"></div>
+              <div class="swiper-slide mdlheroslide mdlheroslide03">
+                <img src="assets/images/sliderSecondImage.jpg" alt="Vista d'una noia a una oficina" class="mdlheroslideimg" />
+              </div>
             </div>
             <div class="mdlherocontent">
               <h1 class="mdlherotitle">
@@ -43,7 +46,7 @@
                   Uneix-te a l’ecosistema empresarial on les idees del futur
                   neixen davant del mar
                 </p>
-                <a href="#" class="mdlherolink">
+                <a href="#" class="mdlherolink" aria-label="Sol·licitar visita">
                   <span class="mdlherolinkinner">
                     <span class="mdlherolinklabel01">SOL·LICITAR VISITA</span>
                     <span class="mdlherolinklabel02" aria-hidden="true">
@@ -54,22 +57,22 @@
               </div>
             </div>
             <div class="mdlherobuttons">
-              <button class="mdlheroprev swiper-button-prev">
-                <svg viewBox="0 0 19 18">
+              <button class="mdlheroprev swiper-button-prev" aria-label="Anterior">
+                <svg viewBox="0 0 19 18" aria-hidden="true" focusable="false">
                   <path
                     d="M3.85027 9.89948L9.89962 15.9488L8.30474 17.5437L0.330316 9.56929C-0.110099 9.12888 -0.110099 8.41482 0.330316 7.97441L8.30474 -0.0000107477L9.89962 1.59487L3.85027 7.64422L18.2042 7.64422L18.2042 9.89948L3.85027 9.89948Z"
                   ></path>
                 </svg>
               </button>
-              <button class="mdlheronext swiper-button-next">
-                <svg viewBox="0 0 19 18">
+              <button class="mdlheronext swiper-button-next" aria-label="Següent">
+                <svg viewBox="0 0 19 18" aria-hidden="true" focusable="false">
                   <path
                     d="M14.3539 7.64422L8.3046 1.59487L9.89949 -0.0000108428L17.8739 7.97441C18.3143 8.41482 18.3143 9.12888 17.8739 9.56929L9.89949 17.5437L8.3046 15.9488L14.3539 9.89948L0 9.89948L0 7.64422L14.3539 7.64422Z"
                   ></path>
                 </svg>
               </button>
             </div>
-          </div>
+          </section>
         </section>
         <!-- seo module-->
         <section class="mdlseo">
@@ -78,7 +81,7 @@
             <div class="mdlseointromask"></div>
             <div class="mdlseointrocontent">
               <h2 class="mdlseotitle">World Trade Center Barcelona</h2>
-              <h2 class="mdlseosubtitle">Treball, Viu, Connecta</h2>
+              <p class="mdlseosubtitle">Treball, Viu, Connecta</p>
             </div>
           </div>
           <!-- Segona  capa-->
@@ -90,6 +93,8 @@
               loop
               playsinline
               preload="metadata"
+              tabindex="-1"
+              aria-hidden="true"
             >
               <source src="./assets/videos/seoVideo.mp4" type="video/mp4" />
             </video>
@@ -100,7 +105,7 @@
                   <h2 class="mdlseomediatitle">Impulsem</h2>
 
                   <div class="mdlseocontent">
-                    <div class="mdlseohighlightswrap swiper">
+                    <section class="mdlseohighlightswrap swiper" aria-label="Àrees d'impuls">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide mdlseohighlight">
                           el futur dels espais de treball.
@@ -117,7 +122,7 @@
                       </div>
 
                       <div class="mdlseoscrollbar swiper-scrollbar"></div>
-                    </div>
+                    </section>
 
                     <div class="mdlseodetails">
                       <p class="mdlseodescription">
@@ -127,7 +132,7 @@
                         es dissenya vora el Mediterrani.
                       </p>
 
-                      <a href="#" class="mdlseolink">
+                      <a href="#" class="mdlseolink" aria-label="Sol·licitar visita">
                         <span class="mdlseolinkinner">
                           <span class="mdlseolinklabel01"
                             >SOL·LICITAR VISITA</span
@@ -147,7 +152,6 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

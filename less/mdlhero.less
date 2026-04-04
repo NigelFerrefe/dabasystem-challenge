@@ -35,6 +35,15 @@
       background-image: url("../assets/images/sliderSecondImage.jpg");
     }
   }
+  .mdlheroslideimg {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   &content {
     position: absolute;
@@ -64,7 +73,7 @@
     @media (min-width: @bpdesktop) {
       position: absolute;
       top: 32.6rem;
-      left: 5rem;
+      left: @paddingdesktop;
       width: 49rem;
       max-width: none;
       margin: 0;
@@ -89,7 +98,7 @@
     @media (min-width: @bpdesktop) {
       position: absolute;
       top: 72.5rem;
-      right: 5rem;
+      right: @paddingdesktop;
       left: auto;
       width: 46rem;
       gap: 4rem;
@@ -199,7 +208,7 @@
       display: flex;
       position: absolute;
       top: 83rem;
-      left: 5rem;
+      left: @paddingdesktop;
       z-index: 10;
       align-items: center;
       gap: 0.5rem;
