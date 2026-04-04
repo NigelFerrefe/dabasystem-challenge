@@ -1,0 +1,253 @@
+.mdlhero {
+  position: relative;
+
+  &slider {
+    position: relative;
+    width: 100%;
+    height: 79rem; 
+
+    @media (min-width: @bpdesktop) {
+      height: 95rem; 
+    }
+  }
+
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  &slide {
+    width: 100%;
+    height: 79rem; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media (min-width: @bpdesktop) {
+      height: 95rem; 
+    }
+
+    &01 {
+      background-image: url("../assets/images/heroImage.png");
+    }
+
+    &02 {
+      background-image: url("../assets/images/sliderImage.jpg");
+    }
+
+    &03 {
+      background-image: url("../assets/images/sliderSecondImage.jpg");
+    }
+  }
+
+  &content {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 2rem 4rem; 
+
+    @media (min-width: @bpdesktop) {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &title {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 0 2.4rem;
+    font-size: @fontsizet1mobile;
+    line-height: @lineheightt1mobile;
+    font-weight: @fontweightregular;
+    color: @colorwhite;
+
+    @media (min-width: @bpdesktop) {
+      position: absolute;
+      top: 32.6rem;
+      left: 5rem;
+      width: 49rem;
+      max-width: none;
+      margin: 0;
+      font-size: @fontsizet1;
+      line-height: @lineheightt1;
+    }
+
+    span {
+      display: block;
+      font-weight: @fontweightsemibold;
+    }
+  }
+
+  &info {
+    width: 35.3rem;
+    max-width: ~"calc(100vw - 4rem)";
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    pointer-events: none;
+
+    @media (min-width: @bpdesktop) {
+      position: absolute;
+      top: 72.5rem;
+      right: 5rem;
+      left: auto;
+      width: 46rem;
+      gap: 4rem;
+    }
+  }
+
+  &subtitle {
+    width: 100%;
+    font-size: @fontsizetextl;
+    line-height: @lineheighttextl;
+    color: @colorwhite;
+    margin: 0;
+
+    @media (min-width: @bpdesktop) {
+      font-size: @fontsizetextxl;
+      line-height: @lineheighttextxl;
+    }
+  }
+
+&link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17.4rem;
+  height: @linkheightmobile;
+  padding: @linkpaddingv @linkpaddingh;
+  gap: 0.3rem;
+  border-radius: @linkborderradius;
+  font-size: @fontsizelinkmobile;
+  line-height: @lineheightlinkmobile;
+  font-weight: @fontweightsemibold;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @colorsecondary;
+  color: @colorwhite;
+  pointer-events: auto;
+  transition: @transitionbase;
+
+  &label01 {
+    display: inline-block;
+  }
+
+  &label02 {
+    display: none;
+  }
+
+  @media (min-width: @bpdesktop) {
+    width: 18.3rem;
+    height: @linkheight;
+    font-size: @fontsizelink;
+    line-height: @lineheightlink;
+
+    position: relative;
+    overflow: hidden;
+
+    &inner {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &label01,
+    &label02 {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    &label01 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &label02 {
+      display: flex;
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    &:hover {
+      background-color: @colorhover;
+    }
+
+    &:hover &label01 {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    &:hover &label02 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+  &buttons {
+    display: none; 
+
+    @media (min-width: @bpdesktop) {
+      display: flex;
+      position: absolute;
+      top: 83rem;
+      left: 5rem;
+      z-index: 10;
+      align-items: center;
+      gap: 0.5rem;
+      width: 10.5rem;
+      height: 5rem;
+      pointer-events: auto;
+    }
+  }
+
+  &prev,
+  &next {
+    position: relative;
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: @transitionbase;
+
+    &::after {
+      display: none; 
+    }
+
+    svg {
+      width: 2.1rem;
+      height: 2.1rem;
+      fill: @colorwhite;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .mdlheroprev,
+  .mdlheronext {
+    opacity: 1;
+  }
+}
