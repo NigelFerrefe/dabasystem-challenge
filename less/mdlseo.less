@@ -132,12 +132,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3.2rem;
+    gap: 3.6rem;
+    padding: 4rem 0;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 8rem;
 
     @media (min-width: @bpdesktop) {
       flex-direction: row;
@@ -153,7 +153,7 @@
   &mediatitle {
     font-size: @fontsizet1mobile;
     line-height: @lineheightt1mobile;
-    font-weight: @fontweightregular;
+    font-weight: @fontweightsemibold;
     @media (min-width: @bpdesktop) {
       font-size: @fontsizet2;
       line-height: @lineheightt2;
@@ -164,7 +164,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
+    gap: 10rem;
 
     @media (min-width: @bpdesktop) {
       align-items: flex-start;
@@ -172,21 +172,78 @@
     }
   }
 
-  &highlights {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    font-size: @fontsizetextxl;
-    line-height: @lineheighttextxl;
+  &highlightswrap {
+    width: 100%;
+    max-width: 24rem;
+    height: 16rem;
+    margin: 0 auto;
+
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      flex-shrink: 0;
+    }
 
     @media (min-width: @bpdesktop) {
+      width: auto;
+      max-width: none;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transform: none;
+        height: auto;
+      }
+
+      .swiper-slide {
+        width: auto;
+        height: auto;
+        margin: 0;
+        flex-shrink: 1;
+      }
+    }
+  }
+
+  &highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 16rem;
+    text-align: center;
+    font-family: @fontprimary;
+    font-weight: @fontweightregular;
+    font-size: @fontsizet3;
+    line-height: @lineheightt3;
+
+    @media (min-width: @bpdesktop) {
+      min-height: auto;
+      justify-content: flex-start;
+      align-items: flex-start;
       text-align: left;
       font-size: @fontsizet2;
       line-height: @lineheightt2;
+    }
+  }
+
+  &scrollbar {
+    position: relative;
+    width: 8rem;
+    height: 0.3rem;
+    background: rgba(255, 255, 255, 0.2);
+
+    .swiper-scrollbar-drag {
+      background: @colorwhite;
+      height: 100%;
+    }
+
+    @media (min-width: @bpdesktop) {
+      display: none;
     }
   }
 

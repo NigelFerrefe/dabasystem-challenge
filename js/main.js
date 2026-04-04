@@ -120,3 +120,48 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: false },
   );
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".mdlseo").forEach((section) => {
+    const slider = section.querySelector(".mdlseohighlightswrap");
+    const scrollbar = section.querySelector(".mdlseoscrollbar");
+
+    if (!slider || !scrollbar) return;
+
+    let highlightsSwiper = null;
+
+    const initHighlightsSwiper = () => {
+      const isMobile = window.innerWidth < 768;
+
+      if (!isMobile) {
+        if (highlightsSwiper) {
+          highlightsSwiper.destroy(true, true);
+          highlightsSwiper = null;
+        }
+        return;
+      }
+
+      if (highlightsSwiper) return;
+
+      highlightsSwiper = new Swiper(slider, {
+        slidesPerView: 1,
+        loop: false,
+        speed: 800,
+        allowTouchMove: true,
+        autoHeight: false,
+        scrollbar: {
+          el: scrollbar,
+          draggable: true,
+        },
+        watchOverflow: true,
+        a11y: {
+          enabled: true,
+        },
+      });
+    };
+
+    initHighlightsSwiper();
+    window.addEventListener("resize", initHighlightsSwiper);
+  });
+});
